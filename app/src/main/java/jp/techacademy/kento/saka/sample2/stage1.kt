@@ -83,32 +83,32 @@ class stage1 : AppCompatActivity() {
     }
 
     fun generate6(){
-        val a = edit1a1.text.toString().toInt() - 4
+        val a = edit1a1.text.toString().toInt()*edit1a1.text.toString().toInt()
         text1a3.text = a.toString()
 
     }
 
     fun generate7(){
-        val a = edit1a1.text.toString().toInt() - 4
+        val a = 16-edit1a1.text.toString().toInt()
         text1a3.text = a.toString()
 
     }
 
     fun generate8(){
-        val a = edit1a1.text.toString().toInt() - 4
+        val a = edit1a1.text.toString().toInt()*(edit1a1.text.toString().toInt()-1)
         text1a3.text = a.toString()
 
     }
 
     fun generate9(){
-        val a = edit1a1.text.toString().toInt() - 4
+        val a = 42/edit1a1.text.toString().toInt()
         text1a3.text = a.toString()
 
     }
 
     fun generate10(){
-        val a = edit1a1.text.toString().toInt() - 4
-        text1a3.text = a.toString()
+        val a = Math.pow(2.0,edit1a1.text.toString().toDouble())
+        text1a3.text = a.toInt().toString()
 
     }
 }

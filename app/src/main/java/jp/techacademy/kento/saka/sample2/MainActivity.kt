@@ -13,7 +13,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        var a: Int = 3
+        var a: Int = 5
 
         button1.setOnClickListener {
 
@@ -61,8 +61,8 @@ class MainActivity : AppCompatActivity() {
 
                 6 -> {
                     val intent = Intent(this, stage1::class.java)
-                    intent.putExtra("VALUE1", 8)
-                    intent.putExtra("VALUE2", 4)
+                    intent.putExtra("VALUE1", 7)
+                    intent.putExtra("VALUE2", 49)
                     intent.putExtra("VALUE3", a)
                     startActivity(intent)
                 }
@@ -70,31 +70,31 @@ class MainActivity : AppCompatActivity() {
                 7 -> {
                     val intent = Intent(this, stage1::class.java)
                     intent.putExtra("VALUE1", 8)
-                    intent.putExtra("VALUE2", 4)
+                    intent.putExtra("VALUE2", 8)
                     intent.putExtra("VALUE3", a)
                     startActivity(intent)
                 }
 
                 8 -> {
                     val intent = Intent(this, stage1::class.java)
-                    intent.putExtra("VALUE1", 8)
-                    intent.putExtra("VALUE2", 4)
+                    intent.putExtra("VALUE1", 9)
+                    intent.putExtra("VALUE2", 72)
                     intent.putExtra("VALUE3", a)
                     startActivity(intent)
                 }
 
                 9 -> {
                     val intent = Intent(this, stage1::class.java)
-                    intent.putExtra("VALUE1", 8)
-                    intent.putExtra("VALUE2", 4)
+                    intent.putExtra("VALUE1", 7)
+                    intent.putExtra("VALUE2", 6)
                     intent.putExtra("VALUE3", a)
                     startActivity(intent)
                 }
 
                 10 -> {
                     val intent = Intent(this, stage1::class.java)
-                    intent.putExtra("VALUE1", 8)
-                    intent.putExtra("VALUE2", 4)
+                    intent.putExtra("VALUE1", 10)
+                    intent.putExtra("VALUE2", 1024)
                     intent.putExtra("VALUE3", a)
                     startActivity(intent)
                 }
