@@ -169,6 +169,14 @@ class stageselect : AppCompatActivity() {
 
         }
 
+    override fun onResume() {
+
+        super.onResume()
+
+        reloadListView()
+    }
+
+
     private fun reloadListView() {
         // 後でTaskクラスに変更する
         //val taskList = mutableListOf("aaa", "bbb", "ccc")

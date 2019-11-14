@@ -5,6 +5,8 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import io.realm.Realm
 import kotlinx.android.synthetic.main.activity_stage1.*
+import android.view.View
+import com.google.android.material.snackbar.Snackbar
 
 class stage1 : AppCompatActivity() {
     private var task: data? = null
@@ -43,6 +45,7 @@ class stage1 : AppCompatActivity() {
 
 
                 val realm = Realm.getDefaultInstance()
+                realm.beginTransaction()
                 task = realm.where(data::class.java).equalTo("id", intent.getIntExtra("VALUE3", 0)).findFirst()
 
                 //title_edit_text.setText()
@@ -50,7 +53,7 @@ class stage1 : AppCompatActivity() {
                 //task!!.answer=true
                 //title.setText()
 
-                realm.beginTransaction()
+
                 realm.copyToRealmOrUpdate(task!!)
                 realm.commitTransaction()
                 realm.close()
@@ -62,6 +65,9 @@ class stage1 : AppCompatActivity() {
 
             }else {
 
+                Snackbar.make(it, "Replace with your own action", Snackbar.LENGTH_INDEFINITE)
+                    .setAction("Action"){
+                    }.show()
                 text1a7.text="不正解"
 
             }

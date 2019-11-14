@@ -28,7 +28,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        var a: Int = 5
+        //var a: Int = 5
 
         button1.setOnClickListener {
 
@@ -39,8 +39,8 @@ class MainActivity : AppCompatActivity() {
             //task.id=21
             //task.title="変更"
             val realm = Realm.getDefaultInstance()
-            var a:Int=1
-            task = realm.where(data::class.java).equalTo("id", a).findFirst()
+            //var a:Int=1
+            task = realm.where(data::class.java).equalTo("answer", false).findFirst()
             realm.close()
             if(task==null){
 
@@ -172,7 +172,7 @@ class MainActivity : AppCompatActivity() {
         for (i in 1..20) {
             val task = data()
             //var hako=arrayOf<Int>(1,1)
-            task.title = "stage" + i.toString()
+            //task.title = "stage" + i.toString()
             //task.contents = "プログラムを書いてPUSHする"
             //task.date = Date()
             task.id = i
