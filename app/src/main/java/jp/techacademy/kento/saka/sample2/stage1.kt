@@ -3,9 +3,11 @@ package jp.techacademy.kento.saka.sample2
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import io.realm.Realm
 import kotlinx.android.synthetic.main.activity_stage1.*
 
 class stage1 : AppCompatActivity() {
+    private var task: data? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -39,8 +41,23 @@ class stage1 : AppCompatActivity() {
 
             if(edit1a2.text.toString()==intent.getIntExtra("VALUE2", 0).toString()){
 
-                val intent = Intent(this, seikai::class.java)
-                startActivity(intent)
+
+                val realm = Realm.getDefaultInstance()
+                task = realm.where(data::class.java).equalTo("id", intent.getIntExtra("VALUE3", 0)).findFirst()
+
+                //title_edit_text.setText()
+                task!!.title="変更"
+                //task!!.answer=true
+                //title.setText()
+
+                realm.beginTransaction()
+                realm.copyToRealmOrUpdate(task!!)
+                realm.commitTransaction()
+                realm.close()
+
+                val intent2 = Intent(this, seikai::class.java)
+                intent2.putExtra("stage", intent.getIntExtra("VALUE3", 0)+1)
+                startActivity(intent2)
                 //text1a7.text="正解"
 
             }else {
