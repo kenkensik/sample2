@@ -1,25 +1,56 @@
 <?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    >
+
+    <TextView
+        android:layout_width="200dp"
+        android:layout_height="100dp"
+        android:text="stage"
+        android:textSize="25sp"
+        android:id="@+id/text"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="help"
+
+        android:layout_alignParentRight="true"
+        android:id="@+id/help"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="hint"
+        android:layout_toStartOf="@+id/help"
+        android:id="@+id/hint"/>
+
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
     android:paddingBottom="16dp"
     android:paddingLeft="16dp"
     android:paddingRight="16dp"
-    android:paddingTop="100dp"
+    android:paddingTop="130dp"
     android:orientation="vertical">
 
 
     <LinearLayout
         xmlns:android="http://schemas.android.com/apk/res/android"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
 
         <EditText
             android:layout_width="100dp"
-            android:layout_height="wrap_content"
-            android:hint=""
+            android:layout_height="100dp"
+            android:hint="free"
+            android:textSize="40sp"
             android:id="@+id/edit1a1"
             android:inputType="number"/>
 
@@ -31,8 +62,8 @@
 
         <Button
             android:layout_width="100dp"
-            android:layout_height="wrap_content"
-            android:text="BUTTON"
+            android:layout_height="100dp"
+            android:text="Generate"
             android:id="@+id/button1a1"/>
 
         <TextView
@@ -46,7 +77,7 @@
             android:layout_height="wrap_content"
             android:text=""
             android:id="@+id/text1a3"
-            android:textSize="20sp"
+            android:textSize="40sp"
             android:inputType="number"/>
 
     </LinearLayout>
@@ -59,8 +90,8 @@
 
         <TextView
             android:layout_width="100dp"
-            android:layout_height="wrap_content"
-            android:textSize="20sp"
+            android:layout_height="100dp"
+            android:textSize="40sp"
             android:text=""
             android:id="@+id/text1a4"/>
 
@@ -72,8 +103,8 @@
 
         <Button
             android:layout_width="100dp"
-            android:layout_height="wrap_content"
-            android:text="BUTTON"
+            android:layout_height="100dp"
+            android:text="Generate"
             android:id="@+id/button1a2"/>
 
         <TextView
@@ -84,17 +115,41 @@
 
         <EditText
             android:layout_width="100dp"
-            android:layout_height="wrap_content"
-            android:hint="Answer"
+            android:layout_height="100dp"
+            android:hint="？"
             android:id="@+id/edit1a2"
+            android:textSize="40sp"
             android:inputType="number"/>
 
     </LinearLayout>
 
-      <TextView
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingLeft="240dp">
+
+        <Button
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/edit1a2"
+            android:text="decide"
+            android:id="@+id/button1a3"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"/>
+
+
+    </LinearLayout>
+
+    <TextView
         android:layout_width="100dp"
         android:layout_height="wrap_content"
         android:id="@+id/text1a7"/>
 
 
 </LinearLayout>
+
+
+
+</RelativeLayout>

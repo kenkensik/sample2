@@ -6,39 +6,28 @@
     android:paddingBottom="16dp"
     android:paddingLeft="16dp"
     android:paddingRight="16dp"
-    android:paddingTop="80dp"
+    android:paddingTop="120dp"
     tools:context=".MainActivity">
 
     <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="400dp"
+        android:layout_height="80dp"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:id="@+id/button1"
-        android:text="play"/>
+        android:text="play"
+        android:textSize="40sp"/>
 
     <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="400dp"
+        android:layout_height="80dp"
         android:layout_below="@+id/button1"
         android:id="@+id/button2"
         android:layout_centerHorizontal="true"
-        android:text="stage" />
+        android:text="stage"
+        android:textSize="40sp"/>
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
-        android:id="@+id/button3"
-        android:text="time atatck" />
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/button3"
-        android:id="@+id/button4"
-        android:layout_centerHorizontal="true"
-        android:text="ranking" />
 
 
 

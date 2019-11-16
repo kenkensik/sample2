@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    >
+
+    <TextView
+        android:layout_width="200dp"
+        android:layout_height="100dp"
+        android:text="example stage"
+        android:textSize="25sp"
+        android:id="@+id/text"/>
+
+
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingBottom="16dp"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:paddingTop="22dp"
+        android:orientation="vertical">
+
+
+        <LinearLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <EditText
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:hint="free"
+                android:textSize="40sp"
+                android:id="@+id/edit0a1"
+                android:inputType="number"/>
+
+            <TextView
+                android:layout_width="20dp"
+                android:layout_height="wrap_content"
+                android:text="→"
+                android:id="@+id/text0a1"/>
+
+            <Button
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:text="Generate"
+                android:id="@+id/button0a1"/>
+
+            <TextView
+                android:layout_width="20dp"
+                android:layout_height="wrap_content"
+                android:text="→"
+                android:id="@+id/text0a2"/>
+
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:id="@+id/text0a3"
+                android:textSize="40sp"
+                android:inputType="number"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:textSize="40sp"
+                android:text=""
+                android:id="@+id/text0a4"/>
+
+            <TextView
+                android:layout_width="20dp"
+                android:layout_height="wrap_content"
+                android:text="→"
+                android:id="@+id/text0a5"/>
+
+            <Button
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:text="Generate"
+                android:id="@+id/button0a2"/>
+
+            <TextView
+                android:layout_width="20dp"
+                android:layout_height="wrap_content"
+                android:text="→"
+                android:id="@+id/text0a6"/>
+
+            <EditText
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:hint="？"
+                android:id="@+id/edit0a2"
+                android:textSize="40sp"
+                android:inputType="number"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingLeft="240dp">
+
+            <Button
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/edit0a2"
+                android:text="decide"
+                android:id="@+id/button0a3"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"/>
+
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="freeに2を入力して横のGENERATEを押して下さい."
+            android:id="@+id/textexplain0"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="すると3と出てきたと思います."
+            android:id="@+id/textexplain1"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="このようにfreeに入力した数がある規則によって変換されます."
+            android:id="@+id/textexplain2"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="この規則を見破りましょう."
+            android:id="@+id/textexplain3"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="今回はfreeに1を足した値が出てきます."
+            android:id="@+id/textexplain4"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="1を入力すると2が出てくると予想されるので?に2を入力してDECIDEを押してみましょう."
+            android:id="@+id/textexplain5"/>
+
+
+
+    </LinearLayout>
+
+
+
+</RelativeLayout>

@@ -15,11 +15,16 @@ class stage1 : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_stage1)
 
-        text1a4.text="       "+intent.getIntExtra("VALUE1", 0).toString()
+        text.text="stage"+intent.getIntExtra("VALUE3", 0)
+        text1a4.text="     "+intent.getIntExtra("VALUE1", 0).toString()
 
         button1a1.setOnClickListener {
 
             if(edit1a1.text.toString()==""||edit1a1.text.toString()==intent.getIntExtra("VALUE1", 0).toString()){
+
+                Snackbar.make(it, intent.getIntExtra("VALUE1", 0).toString()+"を除く1から100までの整数を入力してください", Snackbar.LENGTH_INDEFINITE)
+                    .setAction("×"){
+                    }.show()
 
             }else {
                 when(intent.getIntExtra("VALUE3", 0)){
@@ -39,7 +44,13 @@ class stage1 : AppCompatActivity() {
             }
         }
 
-        button1a2.setOnClickListener{
+        help.setOnClickListener{
+            val intent0 = Intent(this, explain::class.java)
+            startActivity(intent0)
+        }
+
+
+        button1a3.setOnClickListener{
 
             if(edit1a2.text.toString()==intent.getIntExtra("VALUE2", 0).toString()){
 
@@ -49,8 +60,8 @@ class stage1 : AppCompatActivity() {
                 task = realm.where(data::class.java).equalTo("id", intent.getIntExtra("VALUE3", 0)).findFirst()
 
                 //title_edit_text.setText()
-                task!!.title="変更"
-                //task!!.answer=true
+                //task!!.title="変更"
+                task!!.answer=true
                 //title.setText()
 
 
@@ -65,14 +76,15 @@ class stage1 : AppCompatActivity() {
 
             }else {
 
-                Snackbar.make(it, "Replace with your own action", Snackbar.LENGTH_INDEFINITE)
-                    .setAction("Action"){
+                Snackbar.make(it, "不正解", Snackbar.LENGTH_INDEFINITE)
+                    .setAction("×"){
                     }.show()
-                text1a7.text="不正解"
 
             }
 
         }
+
+
 
     }
 
